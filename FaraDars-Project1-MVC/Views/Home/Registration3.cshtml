@@ -1,0 +1,33 @@
+﻿@model FaraDars_Project1_MVC.Models.Registration
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>Registration3</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p>Your Name:@Html.TextBoxFor(x=>x.FullName)</p>
+            <p>Your Email:@Html.TextBoxFor(x=>x.Email)</p>
+            <p>Your Number:@Html.TextBoxFor(x=>x.PhoneNumber)</p>
+            <p>
+                Send Notification Email?
+                @Html.DropDownListFor(x=>x.SendNotification,new[] {
+               new SelectListItem(){Text="Yes,Please",Value=bool.TrueString},
+               new SelectListItem(){Text="No,Tanks",Value=bool.FalseString}
+           },"Choose an option")
+            </p>
+            <input type="submit" name="SendDataToServer" value="Ok" />
+        }
+    </div>
+</body>
+</html>

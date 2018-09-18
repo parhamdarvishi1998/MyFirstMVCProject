@@ -1,0 +1,31 @@
+﻿@model FaraDars_Project1_MVC.Models.Registration
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Thanks</title>
+</head>
+<body>
+    <div>
+
+        <p>Thank You @Model.FullName For Registration</p>
+        
+        @if(@Model.SendNotification == true)
+        {
+            <p>We will send you notification.</p>
+        }
+        else
+        {
+            <p>We wont send you notification.</p>
+        }
+
+
+    </div>
+</body>
+</html>

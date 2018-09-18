@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Wellcome to my website</title>
+</head>
+<body>
+    <div> 
+        @Html.ValidationSummary()
+        <p>Wellcome to MVC.net</p>
+        @Html.ActionLink("Register","Registration")
+        @Html.ActionLink("Register2", "Registration2")
+        @Html.ActionLink("Register3", "Registration3")
+    </div>
+</body>
+</html>
